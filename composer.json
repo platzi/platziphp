@@ -1,0 +1,21 @@
+{
+    "name": "guiwoda/php-laravel",
+    "description": "Proyecto php en Platzi con Laravel",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Guido Contreras Woda",
+            "email": "guiwoda@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "PlatziPHP\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8"
+    }
+}
