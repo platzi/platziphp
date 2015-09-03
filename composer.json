@@ -9,7 +9,11 @@
             "email": "guiwoda@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "illuminate/http": "^5.1",
+        "illuminate/view": "^5.1",
+        "illuminate/routing": "^5.1"
+    },
     "autoload": {
         "psr-4": {
             "PlatziPHP\\": "src/"
