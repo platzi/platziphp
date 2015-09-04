@@ -1,5 +1,5 @@
 <?php
-namespace PlatziPHP;
+namespace PlatziPHP\Domain;
 
 class Email
 {

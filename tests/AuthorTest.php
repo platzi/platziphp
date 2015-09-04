@@ -4,13 +4,13 @@ class AuthorTest extends PHPUnit_Framework_TestCase
     /** @test */
     function it_should_construct()
     {
-        $author = new \PlatziPHP\Author(
+        $author = new \PlatziPHP\Domain\Author(
             'anemail@foo.dev',
             'platzi',
             'AUTOR_DE_PLATZI'
         );
 
-        $this->assertInstanceOf(\PlatziPHP\Author::class, $author);
+        $this->assertInstanceOf(\PlatziPHP\Domain\Author::class, $author);
     }
 
     /** @test */
@@ -18,7 +18,7 @@ class AuthorTest extends PHPUnit_Framework_TestCase
     {
         $this->setExpectedException(\InvalidArgumentException::class);
 
-        $author = new \PlatziPHP\Author(
+        $author = new \PlatziPHP\Domain\Author(
             'anemail@foo.dev',
             '1234',
             'GUIDO'
