@@ -19,6 +19,8 @@ class PostRepository extends BaseRepository
         $statement = $pdo->prepare(
             'SELECT * FROM posts'
         );
+        
+        $statement->execute();
 
         return $this->mapToPosts(
             $statement->fetchAll()
@@ -36,6 +38,8 @@ class PostRepository extends BaseRepository
         $query = "%$query%";
         $statement->bindParam(':query', $query, \PDO::PARAM_STR);
 
+        $statement->execute();
+
         return $this->mapToPosts($statement->fetchAll());
     }
 
@@ -44,7 +48,7 @@ class PostRepository extends BaseRepository
         $posts = new Collection();
 
         foreach ($results as $result) {
-            $post = $this->mapPost($result);
+            $post = $this->mapEntity($result);
 
             $posts->push($post);
         }
